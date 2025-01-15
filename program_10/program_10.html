@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eligibility and Test</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        h1, h2, h3 {
+            color: #4CAF50;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .error-message {
+            color: red;
+            font-size: 0.9em;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #testSection, #resultSection {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Test Elegibility</h1>
+        <form id="testelegibility">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Enter your name">
+                <small id="nameError" class="error-message"></small>
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" placeholder="Enter your age">
+                <small id="ageError" class="error-message"></small>
+            </div>
+            <div class="form-group">
+                <label for="phoneNumber">Phone Number:</label>
+                <input type="text" id="phoneNumber" placeholder="Enter your phone number">
+                <small id="phoneError" class="error-message"></small>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter your email">
+                <small id="emailError" class="error-message"></small>
+            </div>
+            <div class="form-group">
+                <label for="tenthPercentage">10th Percentage:</label>
+                <input type="number" step="0.01" id="tenthPercentage" placeholder="Enter 10th percentage">
+                <small id="tenthError" class="error-message"></small>
+            </div>
+            <div class="form-group">
+                <label for="twelfthPercentage">12th Percentage:</label>
+                <input type="number" step="0.01" id="twelfthPercentage" placeholder="Enter 12th percentage">
+                <small id="twelfthError" class="error-message"></small>
+            </div>
+            <div class="form-group">
+                <label for="btechPercentage">B.Tech CGPA:</label>
+                <input type="number" step="0.01" id="btechPercentage" placeholder="Enter B.Tech CGPA">
+                <small id="btechError" class="error-message"></small>
+            </div>
+            <button type="button" id="submitBtn">Submit</button>
+        </form>
+
+        <div id="testSection">
+            <h2>Test Section</h2>
+
+            <div id="aptitudeSection">
+                <h3>Aptitude Questions</h3>
+                <p>1. What is the next number in the series: 2, 6, 12, 20, 30, ...?</p>
+                <label><input type="radio" name="apt1" value="b"> 42</label><br>
+                <label><input type="radio" name="apt1" value="d"> 46</label><br>
+
+                <p>2. If the price of a book is increased by 20% and the new price is ₹180, what was the original price?</p>
+                <label><input type="radio" name="apt2" value="b"> ₹150</label><br>
+                <label><input type="radio" name="apt2" value="c"> ₹160</label><br>
+                
+                <p>3. What is the value of (25.2 × 2.6) + (10.4 × 1.5)?</p>
+                <label><input type="radio" name="apt3" value="a"> 99.32</label><br>
+                <label><input type="radio" name="apt3" value="b"> 98.04</label><br>
+                <label><input type="radio" name="apt3" value="c"> 96.68</label><br>
+                <label><input type="radio" name="apt3" value="d"> 94.52</label><br>
+                
+                <p>4. A train running at a speed of 60 km/h crosses a bridge in 2 minutes. If the length of the train is 400 meters, what is the length of the bridge?</p>
+                <label><input type="radio" name="apt4" value="a"> 500 meters</label><br>
+                <label><input type="radio" name="apt4" value="b"> 600 meters</label><br>
+                <label><input type="radio" name="apt4" value="c"> 700 meters</label><br>
+                <label><input type="radio" name="apt4" value="d"> 800 meters</label><br>
+                
+                <p>5. If the ratio of the ages of two persons is 4:5, and the difference between their ages is 9 years, what is the sum of their ages?</p>
+                <label><input type="radio" name="apt5" value="a"> 36 years</label><br>
+                <label><input type="radio" name="apt5" value="b"> 45 years</label><br>
+                <label><input type="radio" name="apt5" value="c"> 54 years</label><br>
+                <label><input type="radio" name="apt5" value="d"> 63 years</label><br>
+            </div>
+
+            <div id="codingSection">
+                <h3>Coding Questions</h3>
+                <p>1. Which of the following is used to find the maximum value in a C++ program?</p>
+                <label><input type="radio" name="code1" value="a"> max(x, y)</label><br>
+                <label><input type="radio" name="code1" value="c"> findMax(x, y)</label><br>
+                
+                <p>2. Which Python function is used to reverse a string?</p>
+                <label><input type="radio" name="code2" value="a"> reverse()</label><br>
+                <label><input type="radio" name="code2" value="b"> reversed()</label><br>
+                <label><input type="radio" name="code2" value="c"> slice[::-1]</label><br>
+                <label><input type="radio" name="code2" value="d"> flip()</label><br>
+                
+                <p>3. In C++, which STL container provides a dynamic array?</p>
+                <label><input type="radio" name="code3" value="a"> list</label><br>
+                <label><input type="radio" name="code3" value="b"> vector</label><br>
+                <label><input type="radio" name="code3" value="c"> deque</label><br>
+                <label><input type="radio" name="code3" value="d"> stack</label><br>
+                
+                <p>4. Which Java method is used to check if a given number is a palindrome?</p>
+                <label><input type="radio" name="code4" value="a"> isPalindrome()</label><br>
+                <label><input type="radio" name="code4" value="b"> checkPalindrome()</label><br>
+                <label><input type="radio" name="code4" value="c"> equals()</label><br>
+                <label><input type="radio" name="code4" value="d"> none of the above</label><br>
+                
+                <p>5. In C, which function is used to merge two sorted linked lists into a single sorted linked list?</p>
+                <label><input type="radio" name="code5" value="a"> mergeLists()</label><br>
+                <label><input type="radio" name="code5" value="b"> mergeSorted()</label><br>
+                <label><input type="radio" name="code5" value="c"> sortedMerge()</label><br>
+                <label><input type="radio" name="code5" value="d"> linkMerge()</label><br>
+            </div>
+
+            <div id="dsaSection">
+                <h3>Data Structures and Algorithms (DSA) Questions</h3>
+                <p>1. Which sorting algorithm is typically the fastest for sorting small arrays?</p>
+                <label><input type="radio" name="dsa1" value="a"> Merge Sort</label><br>
+                <label><input type="radio" name="dsa1" value="b"> Quick Sort</label><br>
+                <label><input type="radio" name="dsa1" value="c"> Bubble Sort</label><br>
+                <label><input type="radio" name="dsa1" value="d"> Insertion Sort</label><br>
+
+                <p>2. Which of the following data structures can be used to implement a queue?</p>
+                <label><input type="radio" name="dsa2" value="a"> Array</label><br>
+                <label><input type="radio" name="dsa2" value="b"> Linked List</label><br>
+                <label><input type="radio" name="dsa2" value="c"> Both a and b</label><br>
+                <label><input type="radio" name="dsa2" value="d"> None of the above</label><br>
+
+                <p>3. In a binary search tree (BST), what is the time complexity of searching for an element in the worst case?</p>
+                <label><input type="radio" name="dsa3" value="a"> O(log n)</label><br>
+                <label><input type="radio" name="dsa3" value="b"> O(n)</label><br>
+                <label><input type="radio" name="dsa3" value="c"> O(n log n)</label><br>
+                <label><input type="radio" name="dsa3" value="d"> O(1)</label><br>
+
+                <p>4. Which data structure is used in the implementation of depth-first search (DFS) algorithm?</p>
+                <label><input type="radio" name="dsa4" value="a"> Queue</label><br>
+                <label><input type="radio" name="dsa4" value="b"> Stack</label><br>
+                <label><input type="radio" name="dsa4" value="c"> Hash Table</label><br>
+                <label><input type="radio" name="dsa4" value="d"> Priority Queue</label><br>
+            </div>
+
+            <div id="technicalSection">
+                <h3>Technical Questions</h3>
+                <p>1. What is the main difference between a process and a thread?</p>
+                <label><input type="radio" name="tech1" value="a"> Processes are part of threads</label><br>
+                <label><input type="radio" name="tech1" value="b"> Threads are part of processes</label><br>
+                <label><input type="radio" name="tech1" value="c"> Both are the same</label><br>
+                <label><input type="radio" name="tech1" value="d"> None of the above</label><br>
+
+                <p>2. What layer of the OSI model is responsible for data encryption?</p>
+                <label><input type="radio" name="tech2" value="a"> Physical layer</label><br>
+                <label><input type="radio" name="tech2" value="b"> Network layer</label><br>
+                <label><input type="radio" name="tech2" value="c"> Transport layer</label><br>
+                <label><input type="radio" name="tech2" value="d"> Presentation layer</label><br>
+
+                <p>3. Which of the following is a type of polymorphism in Object-Oriented Programming?</p>
+                <label><input type="radio" name="tech3" value="a"> Static polymorphism</label><br>
+                <label><input type="radio" name="tech3" value="b"> Dynamic polymorphism</label><br>
+                <label><input type="radio" name="tech3" value="c"> Both a and b</label><br>
+                <label><input type="radio" name="tech3" value="d"> None of the above</label><br>
+
+                <p>4. In Java, what does garbage collection mainly do?</p>
+                <label><input type="radio" name="tech4" value="a"> Recycles memory that is no longer in use</label><br>
+                <label><input type="radio" name="tech4" value="b"> Organizes files</label><br>
+                <label><input type="radio" name="tech4" value="c"> Deletes all unused variables</label><br>
+                <label><input type="radio" name="tech4" value="d"> All of the above</label><br>
+
+                <p>5. What is the main difference between TCP and UDP?</p>
+                <label><input type="radio" name="tech5" value="a"> TCP is connection-oriented, UDP is connectionless</label><br>
+                <label><input type="radio" name="tech5" value="b"> TCP is faster than UDP</label><br>
+                <label><input type="radio" name="tech5" value="c"> UDP is reliable, TCP is not</label><br>
+                <label><input type="radio" name="tech5" value="d"> Both are unreliable</label><br>
+            </div>
+
+            <button type="button" id="submitTest">Submit Test</button>
+        </div>
+
+        <div id="resultSection">
+            <h2>Results</h2>
+            <p id="aptitudeResult"></p>
+            <p id="codingResult"></p>
+            <p id="dsaResult"></p>
+            <p id="technicalResult"></p>
+            <p id="finalResult"></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("submitBtn").addEventListener("click", function() {
+            document.getElementById("testSection").style.display = "block";
+        });
+
+        document.getElementById("submitTest").addEventListener("click", function() {
+            var correctAnswers = {
+                apt1: "b",
+                apt2: "b",
+                apt3: "c",
+                apt4: "b",
+                apt5: "c",
+                code1: "a",
+                code2: "c",
+                code3: "b",
+                code4: "d",
+                code5: "c",
+                dsa1: "d",
+                dsa2: "c",
+                dsa3: "b",
+                dsa4: "b",
+                tech1: "b",
+                tech2: "d",
+                tech3: "c",
+                tech4: "a",
+                tech5: "a"
+            };
+
+            var totalQuestions = 20;
+            var correctCount = 0;
+
+            for (var question in correctAnswers) {
+                var selectedOption = document.querySelector(`input[name="${question}"]:checked`);
+                if (selectedOption && selectedOption.value === correctAnswers[question]) {
+                    correctCount++;
+                }
+            }
+
+            var percentage = (correctCount / totalQuestions) * 100;
+            document.getElementById("aptitudeResult").innerText = `Aptitude: ${correctCount}/5`;
+            document.getElementById("codingResult").innerText = `Coding: ${correctCount}/5`;
+            document.getElementById("dsaResult").innerText = `DSA: ${correctCount}/4`;
+            document.getElementById("technicalResult").innerText = `Technical: ${correctCount}/5`;
+            document.getElementById("finalResult").innerText = `Final Result: ${percentage >= 14 ? 'Congratulations you have been selected for interview round we will get in touch with you for the future process.' : 'Sorry!! you are not selected for the next round.'}`;
+
+            document.getElementById("resultSection").style.display = "block";
+        });
+    </script>
+</body>
+</html>
